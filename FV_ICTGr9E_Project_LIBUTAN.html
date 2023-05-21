@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Length Converter</title>
+</head>
+<body style="background-color:#CDD98D">
+<br></br>
+<br></br>
+<div class="container container1 form-control">
+<br></br>
+    <h1 class="text-center">Length Calculator 3000</h1>
+
+<br>
+    
+    <div class="row align-items-center row2">
+
+        <div class="col-md-5">
+            
+            <label for="">
+                Original unit in MM = 
+            </label>
+
+            <input type="number" class="form-control" name="millimeter" placeholder="Millimeter">
+            
+        </div>
+
+        <div class="col-md-2 col2">
+            
+            <h1 class="text-center">=</h1>
+            
+        </div>
+
+        <div class="col-md-5">
+            
+            <label for="">
+                Converted Value = 
+            </label>
+            
+            <input type="number" class="form-control" name="output" disabled>
+            
+        </div>
+
+    </div>
+
+    <div class="row align-items-center row3">
+    <br></br>
+    <br></br>
+    <br></br>
+        <div class="col-md-4">
+            <button class="btn btn-outline-info" onclick="centimeter()">Convert to Centimeters</button>
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-outline-info" onclick="meter()">Convert to Meters</button>
+        </div>
+
+        <div class="col-md-4">
+            <button class="btn btn-outline-info" onclick="kilometer()">Convert to Kilometers</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+<script>
+    function centimeter() {
+    
+    var base = document.getElementsByName('millimeter')[0].value;
+
+    var result = parseFloat(base) / 10 ;
+    
+    document.getElementsByName('output')[0].value= result;
+}
+function meter() {
+    
+    var base = document.getElementsByName('millimeter')[0].value;
+
+    var result = parseFloat(base) / 1000 ;
+    
+    document.getElementsByName('output')[0].value= result;
+
+}
+function kilometer() {
+    
+    var base = document.getElementsByName('millimeter')[0].value;
+
+    var result = parseFloat(base) / 1000000 ;
+    
+    document.getElementsByName('output')[0].value= result;
+
+}
+</script>
+</html>
